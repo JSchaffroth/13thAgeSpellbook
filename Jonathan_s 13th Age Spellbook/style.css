@@ -3,7 +3,19 @@ body {
 }
 h1 {
   color: black;
+  font-family: Verdana;
 }
 p {
   color: black;
+  font-family: Verdana;
+}
+a {
+	color: darkblue;
+	font-family:Verdana;
+	font-size: 20px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
