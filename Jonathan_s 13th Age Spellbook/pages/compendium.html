@@ -23,30 +23,31 @@
 		
 		<hr>
 		
-		<div id="labelsContainer"></div>
+		<div id="output"></div>
 
 		<script>
 			document.addEventListener('DOMContentLoaded', function() 
 			{
-				const labelsContainer = document.getElementById('labelsContainer');
+				const outputElement = document.getElementById('output');
 
-				// Retrieve all checkboxes
-				const checkboxes = document.querySelectorAll('input[type="checkbox"][data-label-id]');
-
-				// Generate labels based on checkboxes
-				checkboxes.forEach(function(checkbox) 
+				// Iterate through all keys in Local Storage
+				for (let i = 0; i < localStorage.length; i++) 
 				{
-					const labelId = checkbox.dataset.labelId;
-					const labelText = localStorage.getItem(`${labelId}_labelText`);
+					const key = localStorage.key(i);
 
-					if (checkbox.checked && labelText) 
+					// Check if the key matches the pattern "labelX_labelText"
+					if (key.startsWith('label') && key.endsWith('_labelText')) 
 					{
-						const label = document.createElement('label');
-						label.textContent = labelText;
+						const value = localStorage.getItem(key);
 
-						labelsContainer.appendChild(label);
+						// Create a new paragraph element to display the value
+						const paragraph = document.createElement('p');
+						paragraph.textContent = value;
+
+						// Append the paragraph element to the output element
+						outputElement.appendChild(paragraph);
 					}
-				});
+				}
 			});
 		</script>
 		
