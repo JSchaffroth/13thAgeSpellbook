@@ -11,38 +11,36 @@ function saveToCompendium(obj)
 	
 }
 
-// Retrieve checkbox elements
-const barbarian_box_0 = document.getElementById('barbarian_barbarianRage');
-
-// Retrieve label elements
-const barbarian_label_0 = document.querySelector('label[for="barbarian_barbarianRage"]');
-	
-// Saves checkbox state to local storage
-function saveCheckboxStates()
+document.addEventListener('DOMContentLoaded', function()
 {
-	localStorage.setItem('barbarian_boxCheck_0', barbarian_box_0.checked);
+	// Retrieve all checkboxes
+	const checkboxes = document.querySelectorAll('input[type="checkbox"][data-label-id]');
+
+	// Attach event listeners to checkboxes to save their states
+	checkboxes.forEach(function(checkbox) {
+		checkbox.addEventListener('change', saveCheckboxState);
+	});
 	
-	if (!barbarian_box_0.checked)
-		localStorage.removeItem('barbarian_labelText_0');
-}
-
-// Saves label text to local storage
-function saveLabelText()
+	// Load checkbox states when the page loads
+	loadCheckboxStates();
+});
+	
+// Saves checkbox states to local storage
+function saveCheckboxState() 
 {
-	localStorage.setItem('barbarian_labelText_0', barbarian_label_0.textContent);
+	const checkbox = this;
+	const labelId = checkbox.dataset.labelId;
+	localStorage.setItem(`${labelId}_checkbox`, checkbox.checked);
 }
-
-// Save label text
-saveLabelText();
 	
 // Loads checkbox states from local storage
-function loadCheckboxStates()
+function loadCheckboxStates() 
 {
-	barbarian_box_0.checked = localStorage.getItem('barbarian_boxCheck_0') === 'true';
+	const checkboxes = document.querySelectorAll('input[type="checkbox"][data-label-id]');
+
+	checkboxes.forEach(function(checkbox) 
+	{
+		const labelId = checkbox.dataset.labelId;
+		checkbox.checked = localStorage.getItem(`${labelId}_checkbox`) === 'true';
+	});
 }
-	
-// Attach event listeners to checkboxes to save their states
-barbarian_box_0.addEventListener('change', saveCheckboxStates);
-	
-// Load checkbox states when the page loads
-window.addEventListener('load', loadCheckboxStates);
