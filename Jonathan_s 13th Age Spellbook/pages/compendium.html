@@ -23,5 +23,22 @@
 		
 		<hr>
 		
+		<label for="barbarian_barbarianRage" id="barbarianLabel"></label>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				// Retrieve the label element
+				const labelElement = document.querySelector('label[for="barbarian_barbarianRage"]');
+
+				// Retrieve the stored label text from Local Storage
+				const labelText = localStorage.getItem('barbarian_labelText_0');
+
+				// Display the label text
+				if (labelElement) {
+					labelElement.textContent = labelText;
+				}
+			});
+		</script>
+		
 	</body>
 </html>
