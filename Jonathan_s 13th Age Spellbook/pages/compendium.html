@@ -23,20 +23,30 @@
 		
 		<hr>
 		
-		<label for="barbarian_barbarianRage" id="barbarianLabel"></label>
+		<div id="labelsContainer"></div>
 
 		<script>
-			document.addEventListener('DOMContentLoaded', function() {
-				// Retrieve the label element
-				const labelElement = document.querySelector('label[for="barbarian_barbarianRage"]');
+			document.addEventListener('DOMContentLoaded', function() 
+			{
+				const labelsContainer = document.getElementById('labelsContainer');
 
-				// Retrieve the stored label text from Local Storage
-				const labelText = localStorage.getItem('barbarian_labelText_0');
+				// Retrieve all checkboxes
+				const checkboxes = document.querySelectorAll('input[type="checkbox"][data-label-id]');
 
-				// Display the label text
-				if (labelElement) {
-					labelElement.textContent = labelText;
-				}
+				// Generate labels based on checkboxes
+				checkboxes.forEach(function(checkbox) 
+				{
+					const labelId = checkbox.dataset.labelId;
+					const labelText = localStorage.getItem(`${labelId}_labelText`);
+
+					if (checkbox.checked && labelText) 
+					{
+						const label = document.createElement('label');
+						label.textContent = labelText;
+
+						labelsContainer.appendChild(label);
+					}
+				});
 			});
 		</script>
 		

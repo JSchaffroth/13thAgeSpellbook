@@ -31,6 +31,16 @@ function saveCheckboxState()
 	const checkbox = this;
 	const labelId = checkbox.dataset.labelId;
 	localStorage.setItem(`${labelId}_checkbox`, checkbox.checked);
+
+	if (checkbox.checked) 
+	{
+		const labelElement = document.querySelector(`label[for="${checkbox.id}"]`);
+		localStorage.setItem(`${labelId}_labelText`, labelElement.textContent);
+	} 
+	else 
+	{
+		localStorage.removeItem(`${labelId}_labelText`);
+	}
 }
 	
 // Loads checkbox states from local storage
