@@ -26,23 +26,23 @@
 		<div id="output"></div>
 
 		<script>
-			document.addEventListener('DOMContentLoaded', function() 
+			document.addEventListener('DOMContentLoaded', function()
 			{
 				const outputElement = document.getElementById('output');
 
 				// Iterate through all keys in Local Storage
-				for (let i = 0; i < localStorage.length; i++) 
+				for (let i = 0; i < localStorage.length; i++)
 				{
 					const key = localStorage.key(i);
 
 					// Check if the key matches the pattern "labelX_labelText"
-					if (key.startsWith('label') && key.endsWith('_labelText')) 
+					if (key.startsWith('label') && key.endsWith('_labelText'))
 					{
 						const value = localStorage.getItem(key);
 
 						// Create a new paragraph element to display the value
 						const paragraph = document.createElement('p');
-						paragraph.textContent = value;
+						paragraph.innerHTML = '<b>' + value + '</b>';
 
 						// Append the paragraph element to the output element
 						outputElement.appendChild(paragraph);
