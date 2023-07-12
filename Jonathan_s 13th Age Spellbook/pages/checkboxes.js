@@ -35,7 +35,7 @@ function saveCheckboxState()
 	if (checkbox.checked) 
 	{
 		const labelElement = document.querySelector(`label[for="${checkbox.id}"]`);
-		localStorage.setItem(`${labelId}_labelText`, labelElement.textContent);
+		localStorage.setItem(`${labelId}_labelText`, labelElement.innerHTML);
 	} 
 	else 
 	{
@@ -52,5 +52,12 @@ function loadCheckboxStates()
 	{
 		const labelId = checkbox.dataset.labelId;
 		checkbox.checked = localStorage.getItem(`${labelId}_checkbox`) === 'true';
+		
+		if (checkbox.checked)
+		{
+			const labelElement = document.querySelector(`label[for="${checkbox.id}"]`);
+			const labelText = localStorage.getItem(`${labelId}_labelText`);
+			labelElement.innerHTML = labelText;
+		}
 	});
 }
