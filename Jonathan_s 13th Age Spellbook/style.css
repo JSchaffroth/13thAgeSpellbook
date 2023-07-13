@@ -58,7 +58,3 @@ a {
 	display: inline-block;
 	padding-top: 1px;
 }
-.label > span:first-child {
-  font-weight: bold;
-  font-size: 19px;
-}
