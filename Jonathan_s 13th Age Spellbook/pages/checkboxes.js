@@ -2,15 +2,6 @@
 //                         Checkbox Code                              //
 ////////////////////////////////////////////////////////////////////////
 
-function saveToCompendium(obj)
-{
-	if (obj.checked)
-	{
-		alert("Yes checked " + obj.id);
-	}
-	
-}
-
 document.addEventListener('DOMContentLoaded', function()
 {
 	// Retrieve all checkboxes
