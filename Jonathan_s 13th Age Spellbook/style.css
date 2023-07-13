@@ -29,7 +29,7 @@ a {
 	margin-right: auto;
 }
 .button {
-	background-color: lightgray; 
+	background-color: lightgray;
 	border: 2px solid Black;
 	color: black;
 	text-align: center;
@@ -48,14 +48,12 @@ a {
 	color: black;
 }
 .checkbox {
-	float: left; 
+	float: left;
 	margin-top: 5px;
 	cursor: pointer;
-	display: inline-block;
-	vertical-align: top;
 }
 .label {
 	font-family: Verdana;
-	display: inline-block;
-	padding-top: 1px;
+	display: block;
+	padding-top: 2px;
 }
