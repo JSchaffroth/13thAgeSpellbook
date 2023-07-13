@@ -1,22 +1,22 @@
 body {
-  background-color: lavender;
+	background-color: lavender;
 }
 h1 {
-  color: black;
-  font-family: Verdana;
+	color: black;
+	font-family: Verdana;
 }
 h2 {
-  color: black;
-  font-family: Verdana;
+	color: black;
+	font-family: Verdana;
 }
 h3 {
-  color: black;
-  font-family: Verdana;
+	color: black;
+	font-family: Verdana;
 }
 p {
-  color: black;
-  font-family: Verdana;
-  line-height: 1.5;
+	color: black;
+	font-family: Verdana;
+	line-height: 1.5;
 }
 a {
 	color: darkblue;
@@ -51,7 +51,14 @@ a {
 	float: left; 
 	margin-top: 5px;
 	cursor: pointer;
+	display: inline-block;
 }
 .label {
 	font-family: Verdana;
+	display: inline-block;
+	padding-top: 1px;
+}
+.label > span:first-child {
+  font-weight: bold;
+  font-size: 19px;
 }
