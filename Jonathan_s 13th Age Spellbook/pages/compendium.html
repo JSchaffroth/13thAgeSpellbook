@@ -44,11 +44,20 @@
 				}
 
 				// Sort the label keys based on the label number
-				labelKeys.sort((a, b) =>
-				{
-					const labelNumberA = parseInt(a.substring(5, a.indexOf('_')));
-					const labelNumberB = parseInt(b.substring(5, b.indexOf('_')));
-					return labelNumberA - labelNumberB;
+				labelKeys.sort((a, b) => {
+					const modeA = a.substring(a.indexOf('_') + 1, a.lastIndexOf('_'));
+					const modeB = b.substring(b.indexOf('_') + 1, b.lastIndexOf('_'));
+					const labelNumberA = parseInt(a.substring(a.lastIndexOf('_') + 1));
+					const labelNumberB = parseInt(b.substring(b.lastIndexOf('_') + 1));
+
+					if (modeA !== modeB)
+					{
+						return modeA.localeCompare(modeB); // Sort by mode if they are different
+					}
+					else
+					{
+						return labelNumberA - labelNumberB; // Sort by label number if modes are the same
+					}
 				});
 
 				// Iterate over the sorted label keys and display the labels
