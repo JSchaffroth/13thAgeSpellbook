@@ -23,9 +23,223 @@
 		<hr>
 		
 		<h2>Class Features</h2>
-		<hr>
-		<h2>Adventurer Talents</h2>
-		<hr>
+		<input id="sorcerer_accessToWizardry" type="checkbox" data-label-id="label_sorc_01" class="checkbox">
+		<label class="label" for="sorcerer_accessToWizardry"><span style="font-size:19px;"><b>Access to Wizardry</b></span><br>
+			Starting at 3rd level, you can take a wizard spell in place of a sorcerer spell. The wizard spell must be two levels lower than the sorcerer spell.</label>
 		
+		<br><br>
+		
+		<input id="sorcerer_breathWeapon" type="checkbox" data-label-id="label_sorc_02" class="checkbox">
+		<label class="label" for="sorcerer_breathWeapon"><span style="font-size:19px;"><b>Breath Weapon</b></span><br>
+			Spells with the breath weapon keyword have a chance to be re-used during battle. Each breath weapon spell lists the chance of re-using it (usually 16+). At the start of each round after you’ve cast the breath weapon spell, make the re-use roll. Success indicates that you may re-use that spell as a standard action, but for that round only. If you fail the re-use roll, you don’t have the option to re-use the spell, but you get another chance at the beginning of the next round.<br>
+			The breath weapon power lasts for a single battle only.<br>
+			You can have only one breath weapon spell active at a time. If you cast a different breath weapon spell when you have an earlier spell active, the new spell cancels the earlier spell. (See the Chromatic Destroyer Heritage talent for the path to multiple breath weapon spells.)<br>
+			Failing a death save cancels any breath weapon spells you have active.</label>
+		<input id="sorcerer_breathWeapon_a" type="checkbox" data-label-id="label_sorc_03" class="checkbox">
+		<label class="label" for="sorcerer_breathWeapon_a"><b><i>Adventurer Feat</i></b> Failing a death save no longer cancels your breath weapon spells. Keep rolling the entire battle.</label>
+		
+		<br><br>
+		
+		<input id="sorcerer_chain" type="checkbox" data-label-id="label_sorc_04" class="checkbox">
+		<label class="label" for="sorcerer_chain"><span style="font-size:19px;"><b>Chain</b></span><br>
+			When you attack with a chain spell and get a natural even roll, you can roll another attack against a different enemy within range. Keep on rolling attacks as long as you get even rolls and don’t run out of new targets. Each enemy can be targeted only once.</label>
+		
+		<br><br>
+		
+		<input id="sorcerer_dancingLights" type="checkbox" data-label-id="label_sorc_05" class="checkbox">
+		<label class="label" for="sorcerer_dancingLights"><span style="font-size:19px;"><b>Dancing Lights</b></span><br>
+			All sorcerers can cast the dancing lights spell as a standard action. Unlike the wizard’s light cantrip, the sorcerer’s dancing lights spell produces a number of varicolored light globes that bloom within 5 to 30 feet of the sorcerer every two to five seconds. The sorcerer has very little control over the exact location or illumination provided by the lights, meaning that they can occasionally be used for dramatic plot purposes.</label>
+			
+		<br><br>
+		
+		<input id="sorcerer_gatherPower" type="checkbox" data-label-id="label_sorc_06" class="checkbox">
+		<label class="label" for="sorcerer_gatherPower"><span style="font-size:19px;"><b>Gather Power</b></span><br>
+			Once initiative has been rolled and a battle is underway, a sorcerer can spend a standard action to gather magical power, preparing themselves for casting a double-strength spell with their next standard action. Gathering power is loud and very noticeable.<br>
+			Sorcerers who want to gather power before initiative has been rolled can go through the motions but won’t get any benefit from the act.<br>
+			When a sorcerer gathers power, it does not count as casting a spell; you can gather power without taking opportunity attacks.<br>
+			In addition, because you spend your standard action to gather power, you generate a small magical benefit. Like many of your powers, this benefit is chaotic rather than perfectly reliable, so you must make a random check to see what benefit you get. Roll a d6 and consult the appropriate table below.<br>
+			If you get a benefit that deals damage to enemies, you can choose the type of damage (cold, fire, lightning, or thunder).<br>
+			<b>Chaotic Benefit, Adventurer Tier (levels 1–4)</b><br>
+			<b>Roll (d6) &nbsp;&nbsp;&nbsp; Effect</b><br>
+			1-2	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You gain a +1 bonus to AC until the start of your next turn.<br>
+			3-4	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deal damage equal to your level to all nearby staggered enemies.<br>
+			5-6	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deal damage equal to your level to one nearby enemy.<br>
+			<b>Chaotic Benefit, Champion Tier (levels 5–7)</b><br>
+			<b>Roll (d6) &nbsp;&nbsp;&nbsp; Effect</b><br>
+			1-2	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You gain a +1 bonus to AC and Physical Defense until the start of your next turn.<br>
+			3-4	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deal damage equal to your level + your Charisma modifier to all nearby staggered enemies.<br>
+			5-6	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deal damage equal to your level + your Charisma modifier to one nearby enemy.<br>
+			<b>Chaotic Benefit, Epic Tier (levels 8–10)</b><br>
+			<b>Roll (d6) &nbsp;&nbsp;&nbsp; Effect</b><br>
+			1-2	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You gain a +1 bonus to all defenses until the start of your next turn.<br>
+			3-4	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deal damage equal to your level + twice your Charisma modifier to all nearby staggered enemies.<br>
+			5-6	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deal damage equal to your level + twice your Charisma modifier to one nearby enemy.<br>
+			After you have gathered power, you can use your next standard action to cast an empowered sorcerer spell. Empowered sorcerer spells deal double the damage of a normal sorcerer spell. This means that you double the damage results of the hit or a miss from the single spell. Non-attack spells generally don’t improve when cast empowered; use empowered casting for attacks.<br>
+			If you do not or are not able to use your next standard action to cast a sorcerer attack spell, you lose the power you’ve gathered. You can use another standard action to gather power again, but the spell you eventually cast will still only do double damage.<br>
+			You can spend your move actions and quick actions any way you like after you gather power and before casting your next empowered spell. Yes, once a battle has started it’s possible to perform the magical firefight trick of gathering power while hiding to the side of the cave entrance, then jumping into the cave opening on your next turn and blasting with the empowered spell.<br>
+			Breath weapon spells add an extra wrinkle. Of course you can gather power the first time you cast a breath weapon spell in a battle. Later in the fight it’s a question of whether you gathered power the turn before a breath weapon spell roll goes your way. You can be all ready with gathered power but roll too low to use the breath weapon spell, forcing you to cast a different spell with the gathered power.<br>
+			If you’ve gathered power for a spell that deals ongoing damage, the ongoing damage is doubled the first time it is dealt, but not on subsequent rounds, if any.</label>
+		<input id="sorcerer_gatherPower_a" type="checkbox" data-label-id="label_sorc_07" class="checkbox">
+		<label class="label" for="sorcerer_gatherPower_a"><b><i>Adventurer Feat</i></b> Once per battle, you can choose the chaotic benefit you want instead of rolling for it.</label>
+		<input id="sorcerer_gatherPower_c" type="checkbox" data-label-id="label_sorc_08" class="checkbox">
+		<label class="label" for="sorcerer_gatherPower_c"><b><i>Champion Feat</i></b> Once per battle when the escalation die is 4+, you can gather power as a quick action.</label>
+		<input id="sorcerer_gatherPower_e" type="checkbox" data-label-id="label_sorc_09" class="checkbox">
+		<label class="label" for="sorcerer_gatherPower_e"><b><i>Epic Feat</i></b> When you gather power, if the escalation die is 2+, you can roll two chaotic benefits. Unlike most effects, the benefits stack if you roll the same result twice.</label>
+		
+		<br><br>
+		
+		<input id="sorcerer_randomEnergy" type="checkbox" data-label-id="label_sorc_06" class="checkbox">
+		<label class="label" for="sorcerer_randomEnergy"><span style="font-size:19px;"><b>Random Energy</b></span><br>
+			Some sorcerer spells deal damage of a random type. If it matters for the situation, use a d4 to determine which type of damage the spell deals.<br>
+			<b>Roll (d4) &nbsp;&nbsp;&nbsp; Energy Type</b><br>
+			1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cold<br>
+			2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fire<br>
+			3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lightning<br>
+			4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thunder</label>
+		   
+		<br><br><hr>
+		
+		<h2>Class Talents</h2>
+		<input id="barbarian_barbaricCleave" type="checkbox" data-label-id="label_barb_05" class="checkbox">
+		<label class="label" for="barbarian_barbaricCleave"><span style="font-size:19px;"><b>Barbaric Cleave</b></span><br>
+			Once per battle, as a free action, make a Barbarian melee attack after you drop a non-mook enemy to 0 hp with a Barbarian melee attack. Mooks do not count for this, unless the mook you dropped was the last of its mook mob.</label>
+		<input id="barbarian_barbaricCleave_a" type="checkbox" data-label-id="label_barb_06" class="checkbox">
+		<label class="label" for="barbarian_barbaricCleave_a"><b><i>Adventurer Feat</i></b> You gain a +2 attack bonus with Barbaric Cleave attacks. If the cleave attack hits, you can heal using a recovery.</label>
+		<input id="barbarian_barbaricCleave_c" type="checkbox" data-label-id="label_barb_07" class="checkbox">
+		<label class="label" for="barbarian_barbaricCleave_c"><b><i>Champion Feat</i></b> If there is no foe engaged with you to use your Barbaric Cleave attack against, as a free action you can move to a nearby foe before making the attack.</label>
+		<input id="barbarian_barbaricCleave_e" type="checkbox" data-label-id="label_barb_08" class="checkbox">
+		<label class="label" for="barbarian_barbaricCleave_e"><b><i>Epic Feat</i></b> While raging, you can use Barbaric Cleave as many times as you like during a battle, but only once per round.</label>
+		
+		<br><br>
+		
+		<input id="barbarian_buildingFrenzy" type="checkbox" data-label-id="label_barb_09" class="checkbox">
+		<label class="label" for="barbarian_buildingFrenzy"><span style="font-size:19px;"><b>Building Frenzy</b></span><br>
+			One battle per day, as a free action after you have missed an attack, gain +1d4 damage to each successful melee attack until the end of the battle. For each missed attack following this, add another +1d4 damage, up to a maximum of +4d4 damage.</label>
+		<input id="barbarian_buildingFrenzy_a" type="checkbox" data-label-id="label_barb_10" class="checkbox">
+		<label class="label" for="barbarian_buildingFrenzy_a"><b><i>Adventurer Feat</i></b> Bonus damage dice are now d6s.</label>
+		<input id="barbarian_buildingFrenzy_c" type="checkbox" data-label-id="label_barb_11" class="checkbox">
+		<label class="label" for="barbarian_buildingFrenzy_c"><b><i>Champion Feat</i></b> Bonus damage dice are now d10s.</label>
+		<input id="barbarian_buildingFrenzy_e" type="checkbox" data-label-id="label_barb_12" class="checkbox">
+		<label class="label" for="barbarian_buildingFrenzy_e"><b><i>Epic Feat</i></b> You can use Building Frenzy twice a day.</label>
+		
+		<br><br>
+		
+		<input id="barbarian_slayer" type="checkbox" data-label-id="label_barb_13" class="checkbox">
+		<label class="label" for="barbarian_slayer"><span style="font-size:19px;"><b>Slayer</b></span><br>
+			During your turn, when you attack a staggered enemy you were not engaged with at the start of your turn, deal +1d6 damage per level to that creature if you hit.</label>
+		<input id="barbarian_slayer_a" type="checkbox" data-label-id="label_barb_14" class="checkbox">
+		<label class="label" for="barbarian_slayer_a"><b><i>Adventurer Feat</i></b> You gain a +2 bonus to Slayer attacks.</label>
+		<input id="barbarian_slayer_c" type="checkbox" data-label-id="label_barb_15" class="checkbox">
+		<label class="label" for="barbarian_slayer_c"><b><i>Champion Feat</i></b> Once per battle, when you miss with a Slayer attack, deal the additional +1d6-per-level damage to the target instead of normal miss damage.</label>
+		<input id="barbarian_slayer_e" type="checkbox" data-label-id="label_barb_16" class="checkbox">
+		<label class="label" for="barbarian_slayer_e"><b><i>Epic Feat</i></b> Whenever one of your Slayer attacks drops a non-mook enemy to 0 hp, you gain 20 temporary hit points.</label>
+		
+		<br><br>
+		
+		<input id="barbarian_stronheart" type="checkbox" data-label-id="label_barb_17" class="checkbox">
+		<label class="label" for="barbarian_stronheart"><span style="font-size:19px;"><b>Strongheart</b></span><br>
+			Your recovery dice are d12s instead of d10s.</label>
+		<input id="barbarian_stronheart_a" type="checkbox" data-label-id="label_barb_18" class="checkbox">
+		<label class="label" for="barbarian_stronheart_a"><b><i>Adventurer Feat</i></b> Increase your total number of recoveries by 1.</label>
+		<input id="barbarian_stronheart_c" type="checkbox" data-label-id="label_barb_19" class="checkbox">
+		<label class="label" for="barbarian_stronheart_c"><b><i>Champion Feat</i></b> You gain +1 PD. When you heal using a recovery, you can roll a save against a save ends effect.</label>
+		<input id="barbarian_stronheart_e" type="checkbox" data-label-id="label_barb_20" class="checkbox">
+		<label class="label" for="barbarian_stronheart_e"><b><i>Epic Feat</i></b> Increase your total number of recoveries by 1 (making a total of +2 from this talent).</label>
+		
+		<br><br>
+		
+		<input id="barbarian_unstoppable" type="checkbox" data-label-id="label_barb_21" class="checkbox">
+		<label class="label" for="barbarian_unstoppable"><span style="font-size:19px;"><b>Unstoppable</b></span><br>
+			Once per battle, declare you’re using Unstoppable before making a barbarian melee attack. If your attack hits at least one target, you can heal using a recovery.</label>
+		<input id="barbarian_unstoppable_a" type="checkbox" data-label-id="label_barb_22" class="checkbox">
+		<label class="label" for="barbarian_unstoppable_a"><b><i>Adventurer Feat</i></b> The Unstoppable recovery is free.</label>
+		<input id="barbarian_unstoppable_c" type="checkbox" data-label-id="label_barb_23" class="checkbox">
+		<label class="label" for="barbarian_unstoppable_c"><b><i>Champion Feat</i></b> Add double your Constitution modifier to the healing the recovery provides.</label>
+		<input id="barbarian_unstoppable_e" type="checkbox" data-label-id="label_barb_24" class="checkbox">
+		<label class="label" for="barbarian_unstoppable_e"><b><i>Epic Feat</i></b> You can use Unstoppable twice per battle.</label>
+		
+		<br><br>
+		
+		<input id="barbarian_whirlwind" type="checkbox" data-label-id="label_barb_25" class="checkbox">
+		<label class="label" for="barbarian_whirlwind"><span style="font-size:19px;"><b>Whirlwind</b></span><br>
+			You can make a Whirlwind attack as the first action of your turn when you are engaged by two or more enemies.<br>
+		   You take a –4 penalty to your AC and PD until the start of your next turn. Then roll a separate melee attack against each enemy you are engaged with. You deal no miss damage with these attacks.</label>
+		<input id="barbarian_whirlwind_a" type="checkbox" data-label-id="label_barb_26" class="checkbox">
+		<label class="label" for="barbarian_whirlwind_a"><b><i>Adventurer Feat</i></b> You now deal normal miss damage with missed Whirlwind attacks.</label>
+		<input id="barbarian_whirlwind_c" type="checkbox" data-label-id="label_barb_27" class="checkbox">
+		<label class="label" for="barbarian_whirlwind_c"><b><i>Champion Feat</i></b> The penalty to your AC and PD is reduced to –2. In addition, disengage checks you make the same turn as using Whirlwind automatically succeed.</label>
+		<input id="barbarian_whirlwind_e" type="checkbox" data-label-id="label_barb_28" class="checkbox">
+		<label class="label" for="barbarian_whirlwind_e"><b><i>Epic Feat</i></b> You can use Whirlwind anytime during your turn, not just as the first action.</label>
+		
+		<br><br><hr>
+		
+		<h2>Champion Talents</h2>
+		<input id="barbarian_naturalWill" type="checkbox" data-label-id="label_barb_29" class="checkbox">
+		<label class="label" for="barbarian_naturalWill"><span style="font-size:19px;"><b>Natural Will</b></span><br>
+			One battle per day as a quick action, you gain a +2 bonus to your Mental Defense until the end of the battle.</label>
+		<input id="barbarian_naturalWill_a" type="checkbox" data-label-id="label_barb_30" class="checkbox">
+		<label class="label" for="barbarian_naturalWill_a"><b><i>Adventurer Feat</i></b> You can now use Natural Will in two battles per day.</label>
+		<input id="barbarian_naturalWill_c" type="checkbox" data-label-id="label_barb_31" class="checkbox">
+		<label class="label" for="barbarian_naturalWill_c"><b><i>Champion Feat</i></b> The bonus increases to +4 Mental Defense.</label>
+		<input id="barbarian_naturalWill_e" type="checkbox" data-label-id="label_barb_32" class="checkbox">
+		<label class="label" for="barbarian_naturalWill_e"><b><i>Epic Feat</i></b> You can now use Natural Will as a free action when an enemy attacks you.</label>
+		
+		<br><br>
+		
+		<input id="barbarian_roaringRage" type="checkbox" data-label-id="label_barb_33" class="checkbox">
+		<label class="label" for="barbarian_roaringRage"><span style="font-size:19px;"><b>Roaring Rage</b></span><br>
+			<b>Special:</b> You must be a Dragonspawn.<br>
+		    When you use your breath weapon while you are not raging, roll a save. If you succeed, you start raging and continue raging until the end of your next turn. This power functions like other barbarian 
+			rages, but it neither expends a rage nor gives you the option to roll to recharge your rage after the battle.</label>
+		<input id="barbarian_roaringRage_c" type="checkbox" data-label-id="label_barb_34" class="checkbox">
+		<label class="label" for="barbarian_roaringRage_c"><b><i>Champion Feat</i></b> Until you’ve succeeded once in a day with the roaring rage save, it’s an easy save (6+) instead of a normal save.</label>
+		<input id="barbarian_roaringRage_e" type="checkbox" data-label-id="label_barb_35" class="checkbox">
+		<label class="label" for="barbarian_roaringRage_e"><b><i>Epic Feat</i></b> If you score a critical hit with your breath weapon, you can start raging as a free rage that lasts until the end of the battle and does not expend your use of Barbarian Rage.</label>
+		
+		<br><br>
+		
+		<input id="barbarian_violence" type="checkbox" data-label-id="label_barb_36" class="checkbox">
+		<label class="label" for="barbarian_violence"><span style="font-size:19px;"><b>Violence</b></span><br>
+			Once per battle, add a +1d4 bonus to a barbarian melee attack roll after finding out whether you hit or missed.</label>
+		<input id="barbarian_violence_c" type="checkbox" data-label-id="label_barb_37" class="checkbox">
+		<label class="label" for="barbarian_violence_c"><b><i>Champion Feat</i></b> If the attack still misses, deal half damage.</label>
+		<input id="barbarian_violence_e" type="checkbox" data-label-id="label_barb_38" class="checkbox">
+		<label class="label" for="barbarian_violence_e"><b><i>Epic Feat</i></b> The bonus increases to +1d6.</label>
+		
+		<br><br><hr>
+		
+		<h2>Epic Talents</h2>
+		<input id="barbarian_ancestralWarband" type="checkbox" data-label-id="label_barb_39" class="checkbox">
+		<label class="label" for="barbarian_ancestralWarband"><span style="font-size:19px;"><b>Ancestral Warband</b></span><br>
+			One battle per day as a quick action, you can call the spirits of your ancestors to fight alongside you. Your ancestors can’t be hurt or affected by the creatures of this world.<br>
+			At the end of each of your turns, if you are conscious, roll a d6. If you roll less than or equal to the escalation die, a member of your spirit warband strikes from the spirit realm into the world.<br>
+			Make a melee attack against a nearby enemy as if you were making the attack yourself, using any talents, feats, or magic items as you see fit. This attack doesn’t take any of your actions.</label>
+		<input id="barbarian_ancestralWarband_e" type="checkbox" data-label-id="label_barb_40" class="checkbox">
+		<label class="label" for="barbarian_ancestralWarband_e"><b><i>Epic Feat</i></b> Your Ancestral Warband spirits are always raging, even if you are not, and continue to fight for a single round while you are unconscious.</label>
+		
+		<br><br>
+		
+		<input id="barbarian_relentless" type="checkbox" data-label-id="label_barb_41" class="checkbox">
+		<label class="label" for="barbarian_relentless"><span style="font-size:19px;"><b>Relentless</b></span><br>
+			While raging, you have resist damage 12+ (when an attack targets you, the attacker must roll a natural 12 or higher on the attack roll or it only deals half damage).</label>
+		<input id="barbarian_relentless_e" type="checkbox" data-label-id="label_barb_42" class="checkbox">
+		<label class="label" for="barbarian_relentless_e"><b><i>Epic Feat</i></b> Even when not raging, whenever you score a critical hit against an enemy, you have resist damage 12+ until the start of your next turn.</label>
+		
+		<br><br><hr>
+		
+		<h2>Barbarian Multiclass</h2>
+		<input id="barbarian_controlledRage" type="checkbox" data-label-id="label_barb_43" class="checkbox">
+		<label class="label" for="barbarian_controlledRage"><span style="font-size:19px;"><b>Controlled Rage</b></span><br>
+			While raging, you cannot use attacks, powers, or spells from another class unless you take the Controlled Rage feat.</label>
+		<input id="barbarian_controlledRage_a" type="checkbox" data-label-id="label_barb_44" class="checkbox">
+		<label class="label" for="barbarian_controlledRage_a"><b><i>Adventurer Tier</i></b> You can use powers and attacks from your other class while raging. You can’t use the extra d20 that Barbarian Rage gives you while making an attack from the other class, 
+		      but at least you can slip out of your rage long enough to use a power or attack from your other class.</label>
+		<input id="barbarian_controlledRage_c" type="checkbox" data-label-id="label_barb_45" class="checkbox">
+		<label class="label" for="barbarian_controlledRage_c"><b><i>Champion Tier</i></b> Once per battle while raging, you can use a melee attack from your other class as if it was a barbarian attack, rolling 2d20 for the attack. (Examples of possible uses include a bard’s 
+		      flexible attack battle cries, a commander attack using the Lead from the Front talent that will garner command points, a fighter’s flexible attacks, a ranger’s double melee attack, and so on.)</label>
+		
+		<br><hr>
+		
+		<script src="../checkboxes.js"></script>
 	</body>
 </html>
